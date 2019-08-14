@@ -1,3 +1,17 @@
+# libretro-content
+#
+# The content that's available through the content downloader.
+#
+# Commands:
+#   make
+#       Builds both the .index and .index-dir files
+#
+#   make create-index
+#       Creates the .index file in the given DIR
+#
+#   make clean
+#       Deletes all the .index and .index-dir files
+
 SUBDIRS = $(shell ls */ -d --escape)
 
 all: clean
