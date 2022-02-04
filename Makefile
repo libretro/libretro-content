@@ -12,7 +12,7 @@
 #   make clean
 #       Deletes all the .index and .index-dir files
 
-SUBDIRS = $(shell ls */ -d --escape)
+SUBDIRS = $(shell ls */ -d --escape | sed 's/\x27/\\\x27/g')
 
 all: clean
 	@echo "" > .index
